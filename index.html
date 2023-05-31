@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Budget Planner</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="#">Budget Planner</a>
+          <!-- <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+     
+        </div>
+      </nav>
+      
+      <div class="wrapper">
+        <div class="container">
+            <div class="sub_cont">
+                <div class="income_con con">
+                    <h2>Income</h2> <br>
+                    <p class="hide error budget-error" id="income_tit_err">
+                        Values can't be empty !
+                    </p>
+
+                    <input type="text" class="product_tit" name="" id="income_tit" placeholder="Enter the source of income">
+  <br>
+                    <input type="number" name="" id="income_amount" placeholder="Enter the money received"> <br>
+                        <button onclick="incomeList()" class="submit" id="check_amount">Submit</button>
+                </div>
+
+                <div class="total_amount con">
+                  <h2>Budget</h2>
+                  <br>
+                  <p class="hide error budget-error" id="budget_err">
+                      Value can't be empty or in negative.
+                  </p>
+
+                  <input type="number" name="" id="total_amount" placeholder="Enter the Total Amount you have. "> <br>
+                  <button  onclick="setBudget()"  class="submit " id="total_amount_button">Set Budget</button>
+
+              </div>
+
+                <div class="user_amount_container con">
+                    <h2>Expenses</h2> <br>
+                    <p class="hide error budget-error" id="product_tit_err">
+                        Values can't be empty !
+                    </p>
+
+                    <input type="text" class="product_tit" name="" id="exp_tit" placeholder="Enter the title of the product">
+  <br>
+                    <input type="number" name="" id="exp_amount" placeholder="Enter the cost of the product"> <br>
+                        <button  onclick="expenses()" class="submit" id="check_amount">Submit</button>
+                </div>
+            </div>
+
+
+
+            <div class="output flex" >
+               <h2>Budget Table</h2><br>
+               <div class="out_put">
+                <p>Income</p>
+                <span id="income_amt">0</span>
+            </div>
+            <div class="out_put">
+              <p>Total Budget</p>
+              <span id="amount">0</span>
+          </div>
+            <div class="out_put">
+              <p>Expenses</p>
+              <span id="exp_amt">0</span>
+          </div>
+            <div class="out_put">
+                <p>Balance</p>
+                <span id="bal_amount">0</span>
+            </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="exp_list">
+          <h2>Income List</h2>
+          <div class="list_cont">
+            <ul id="list_one">
+              
+            </ul>
+
+          </div>
+      </div>
+      <br>
+
+        <div class="exp_list">
+            <h2>Expense List</h2>
+            <div class="list_cont">
+              <ul id="list">
+
+              </ul>
+
+            </div>
+        </div>
+       
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <script src="./script.js"></script>
+      
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
+</html>
